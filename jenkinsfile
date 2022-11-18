@@ -26,8 +26,8 @@ pipeline{
             }
             
             steps{
-                sh 'cat $NETLIFY_SITE_ID'
-                sh 'cat $NETLIFY_AUTH_TOKEN'
+                sh 'echo $NETLIFY_SITE_ID'
+                sh 'echo $NETLIFY_AUTH_TOKEN'
                 sh 'npm install netlify-cli'
                 sh 'npx netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN'
 
